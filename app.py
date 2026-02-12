@@ -62,6 +62,13 @@ st.divider()
 
 st.markdown("Visualizing and clustering accidents can be really useful for instantly recognizing **high-risky** zones in a map. In this capstone project we detected **blacks spots** area in Lisbon, through the DBSCAN clustering method, given that a black spot is a area of 100m radius, with a minimum of 5 accidents and a cumulative severity of 40.")
 
+
+df['Severity Index']= (100*df['fatalities_30d']) + (10*df['serious_injuries_30d'])+ (3*df['minor_injuries_30d'])
+current_columns = df.columns.tolist()
+print(f"current_columns{current_columns}")
+weekday_index= current_columns.index('weekday')
+severity_index_column = 'Severity Index'
+
 def process_clusters(_df_input):
             # Create GeoDataFrame
             gdf = gpd.GeoDataFrame(
