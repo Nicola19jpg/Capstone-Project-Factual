@@ -16,6 +16,7 @@ st.markdown("Explore and analyze road accident data from Lisbon.")
 
 def load_data():
     df = pd.read_csv("Road_Accidents_Lisbon.csv")
+    df['Severity Index']= (100*df['fatalities_30d']) + (10*df['serious_injuries_30d'])+ (3*df['minor_injuries_30d'])
     return df
 
 df = load_data()
