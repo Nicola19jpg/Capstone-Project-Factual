@@ -14,7 +14,7 @@ st.title("Capstone Project - Lisbon")
 st.markdown("Explore and analyze road accident data from Lisbon.")
 
 def load_data():
-    df = pd.read_csv("Road_Accidents_Lisbon.csv")
+    df = pd.read_csv("data/Road_Accidents_Lisbon.csv")
     return df
 
 df = load_data()
