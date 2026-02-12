@@ -5,6 +5,7 @@ import folium
 import numpy as np
 import seaborn as sns
 import matplotlib.colors as colors
+import matplotlib.pyplot as plt
 from shapely.geometry import Point
 from sklearn.cluster import DBSCAN
 from streamlit_folium import st_folium
@@ -133,7 +134,7 @@ heatmap_data = df.pivot_table(
 days_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 heatmap_data = heatmap_data.reindex(days_order)
 
-fig3, ax3 = plt.subplot(figsize=(16, 8))
+fig3, ax3 = plt.subplots(figsize=(16, 8))
 sns.heatmap(
     heatmap_data,
     cmap='YlOrRd',
