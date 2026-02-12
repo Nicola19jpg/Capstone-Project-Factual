@@ -60,7 +60,7 @@ st.pyplot(fig2)
 
 st.divider()
 
-st.markdown("Visualizing and clustering accidents can be really useful for instantly recognizing high-risky zones in a map. In this capstone project we detected blacks spots area in Lisbon, through the DBSCAN clustering method, given that a black spot is a area of 100m radius, with a minimum of 5 accidents and a cumulative severity of 40.")
+st.markdown("Visualizing and clustering accidents can be really useful for instantly recognizing **high-risky** zones in a map. In this capstone project we detected **blacks spots** area in Lisbon, through the DBSCAN clustering method, given that a black spot is a area of 100m radius, with a minimum of 5 accidents and a cumulative severity of 40.")
 
 def process_clusters(_df_input):
             # Create GeoDataFrame
